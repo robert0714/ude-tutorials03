@@ -88,6 +88,7 @@ public class ContactServiceForUDEDBImplTest extends AbstractTransactionalJUnit4S
 
         Contact contact = new Contact();
 
+
         contactService.save(contact);
 //        em.flush();
 
