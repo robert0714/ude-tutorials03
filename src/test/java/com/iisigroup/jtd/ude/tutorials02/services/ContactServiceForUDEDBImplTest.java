@@ -24,7 +24,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
+/*喔ｙa*/
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { UDEConfig.class })
 @TestExecutionListeners({ServiceTestExecutionListener.class})
