@@ -28,8 +28,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-
+      
+                          
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { JPAConfig.class })
 @TestExecutionListeners({ServiceTestExecutionListener.class})
@@ -80,7 +80,7 @@ public class ContactServiceForJPAImplTest  extends AbstractTransactionalJUnit4Sp
 		 assertEquals(1, size);
 	} 
 	
-
+	@DataSets(setUpDataSet="/com/iisigroup/jtd/ude/tutorials02/services/ContactServiceImplTest.xls") 
 	@Test
     public void testSave() throws Exception {
         deleteFromTables("CONTACT");
