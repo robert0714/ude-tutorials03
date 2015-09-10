@@ -80,7 +80,7 @@ public class ContactServiceForJPAImplTest  extends AbstractTransactionalJUnit4Sp
 		 assertEquals(1, size);
 	} 
 	
-	@DataSets(setUpDataSet="/com/iisigroup/jtd/ude/tutorials02/services/ContactServiceImplTest.xls") 
+
 	@Test
     public void testSave() throws Exception {
         deleteFromTables("CONTACT");
