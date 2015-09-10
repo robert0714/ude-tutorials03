@@ -85,7 +85,6 @@ public class ContactServiceForUDEDBImplTest extends AbstractTransactionalJUnit4S
     @Test(expected=ConstraintViolationException.class)
     public void testAddContactWithJSR349Error() throws Exception {
         deleteFromTables("CONTACT");
-
         Contact contact = new Contact();
 
 
