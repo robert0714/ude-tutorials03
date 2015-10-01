@@ -31,9 +31,10 @@
 			MappingJackson2HttpMessageConverter for Jackson 2.x. -->
 		<commons.io.version>2.4</commons.io.version>
 		<spring.security.version>4.0.2.RELEASE</spring.security.version>
-		<!-- spring security migration from  3.2.8.RELEASE to 4.0.2.RELEASE , some problems happened -->
+		<!-- spring security migration from 3.2.8.RELEASE to 4.0.2.RELEASE , some 
+			problems happened -->
 		<junit.version>4.12</junit.version>
-		<javax.el.version>2.2</javax.el.version> 
+		<javax.el.version>2.2</javax.el.version>
 		<ude.release.version>1.0.0</ude.release.version>
 	</properties>
 	<dependencies>
@@ -75,13 +76,13 @@
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 			<scope>test</scope>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.glassfish.web</groupId>
 			<artifactId>el-impl</artifactId>
 			<version>2.2</version>
 			<scope>test</scope>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
@@ -91,7 +92,7 @@
 			<groupId>org.jadira.usertype</groupId>
 			<artifactId>usertype.core</artifactId>
 			<version>${usertype.version}</version>
-			
+
 		</dependency>
 		<dependency>
 			<groupId>org.dbunit</groupId>
@@ -138,7 +139,7 @@
 					<groupId>org.slf4j</groupId>
 				</exclusion>
 			</exclusions>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
@@ -210,7 +211,7 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson.version}</version>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
@@ -283,37 +284,41 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-ldap</artifactId>
+			<version>${spring.security.version}</version>			
+		</dependency>
 		<!-- UDE 元件 -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.iisigroup</groupId> -->
-<!-- 			<artifactId>iisi-ude-core</artifactId> -->
-<!-- 			<version>${ude.release.version}</version> -->
-<!-- 			<exclusions> -->
-<!-- 				<exclusion> -->
-<!-- 					<artifactId>spring-context</artifactId> -->
-<!-- 					<groupId>org.springframework</groupId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<artifactId>spring-core</artifactId> -->
-<!-- 					<groupId>org.springframework</groupId> -->
-<!-- 				</exclusion> -->
-<!-- 				<exclusion> -->
-<!-- 					<artifactId>slf4j-api</artifactId> -->
-<!-- 					<groupId>org.slf4j</groupId> -->
-<!-- 				</exclusion> -->
-<!-- 			</exclusions> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.iisigroup</groupId> -->
-<!-- 			<artifactId>iisi-ude-db-core</artifactId> -->
-<!-- 			<version>${ude.release.version}</version> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.iisigroup</groupId> -->
-<!-- 			<artifactId>iisi-ude-db-core-hibernate</artifactId> -->
-<!-- 			<version>${ude.release.version}</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.iisigroup</groupId> -->
+		<!-- <artifactId>iisi-ude-core</artifactId> -->
+		<!-- <version>${ude.release.version}</version> -->
+		<!-- <exclusions> -->
+		<!-- <exclusion> -->
+		<!-- <artifactId>spring-context</artifactId> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- </exclusion> -->
+		<!-- <exclusion> -->
+		<!-- <artifactId>spring-core</artifactId> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- </exclusion> -->
+		<!-- <exclusion> -->
+		<!-- <artifactId>slf4j-api</artifactId> -->
+		<!-- <groupId>org.slf4j</groupId> -->
+		<!-- </exclusion> -->
+		<!-- </exclusions> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.iisigroup</groupId> -->
+		<!-- <artifactId>iisi-ude-db-core</artifactId> -->
+		<!-- <version>${ude.release.version}</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.iisigroup</groupId> -->
+		<!-- <artifactId>iisi-ude-db-core-hibernate</artifactId> -->
+		<!-- <version>${ude.release.version}</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>com.iisigroup</groupId>
 			<artifactId>iisi-ude-util7</artifactId>
@@ -330,9 +335,41 @@
 			<version>${javaee.web.api.version}</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- embed ldap server -->
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-core</artifactId>
+			<version>1.5.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-core-entry</artifactId>
+			<version>1.5.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-protocol-shared</artifactId>
+			<version>1.5.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-server-jndi</artifactId>
+			<version>1.5.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.shared</groupId>
+			<artifactId>shared-ldap</artifactId>
+			<version>0.9.15</version>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 	<build>
-	<finalName>ude-tutorials03</finalName>
+		<finalName>ude-tutorials03</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
