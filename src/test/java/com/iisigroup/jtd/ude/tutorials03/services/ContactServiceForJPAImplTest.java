@@ -1,4 +1,4 @@
-package com.iisigroup.jtd.ude.tutorials02.services;
+package com.iisigroup.jtd.ude.tutorials03.services;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,8 @@ import com.google.common.collect.Lists;
 import com.iisigroup.jtd.ude.common.DataSets;
 import com.iisigroup.jtd.ude.common.ServiceTestExecutionListener;
 import com.iisigroup.jtd.ude.config.JPAConfig;
-import com.iisigroup.jtd.ude.tutorials02.model.Contact;
+import com.iisigroup.jtd.ude.tutorials03.model.Contact;
+import com.iisigroup.jtd.ude.tutorials03.services.ContactService;
 
 import java.util.ArrayList;
 import java.util.List;

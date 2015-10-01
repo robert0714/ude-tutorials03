@@ -1,4 +1,4 @@
-package com.iisigroup.jtd.ude.tutorials02.controllers;
+package com.iisigroup.jtd.ude.tutorials03.controllers;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Locale;
 
 import com.google.common.collect.Lists;
-import com.iisigroup.jtd.ude.tutorials02.model.Contact;
-import com.iisigroup.jtd.ude.tutorials02.model.ContactGrid;
-import com.iisigroup.jtd.ude.tutorials02.model.Message;
-import com.iisigroup.jtd.ude.tutorials02.services.ContactService;
-import com.iisigroup.jtd.ude.tutorials02.utils.UrlUtil;
+import com.iisigroup.jtd.ude.tutorials03.model.Contact;
+import com.iisigroup.jtd.ude.tutorials03.model.ContactGrid;
+import com.iisigroup.jtd.ude.tutorials03.model.Message;
+import com.iisigroup.jtd.ude.tutorials03.services.ContactService;
+import com.iisigroup.jtd.ude.tutorials03.utils.UrlUtil;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;

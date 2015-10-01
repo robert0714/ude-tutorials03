@@ -8,11 +8,11 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<import resource="classpath:META-INF/spring/datasource-tx-udedb.xml"/>
-<!--     <import resource="classpath:META-INF/spring/datasource-tx-jpa.xml"/> -->
+<!-- 	<import resource="classpath:META-INF/spring/datasource-tx-udedb.xml"/> -->
+    <import resource="classpath:META-INF/spring/datasource-tx-jpa.xml"/>
     
     <import resource="classpath:META-INF/spring/security-context.xml"/>
  
-    <bean id ="myWebAppInitializer" class="com.iisigroup.jtd.ude.tutorials02.MyWebAppInitializer" ></bean>
+    <bean id ="myWebAppInitializer" class="com.iisigroup.jtd.ude.tutorials03.MyWebAppInitializer" ></bean>
      
 </beans>

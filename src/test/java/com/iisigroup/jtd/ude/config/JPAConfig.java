@@ -6,8 +6,8 @@
  */
 package com.iisigroup.jtd.ude.config;
 
-import com.iisigroup.jtd.ude.tutorials02.services.ContactService;
-import com.iisigroup.jtd.ude.tutorials02.services.ContactServiceForJPAImpl;
+import com.iisigroup.jtd.ude.tutorials03.services.ContactService;
+import com.iisigroup.jtd.ude.tutorials03.services.ContactServiceForJPAImpl;
 
 import javax.sql.DataSource;
 

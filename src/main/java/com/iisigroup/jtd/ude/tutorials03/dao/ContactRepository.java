@@ -1,8 +1,8 @@
-package com.iisigroup.jtd.ude.tutorials02.dao;
+package com.iisigroup.jtd.ude.tutorials03.dao;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.iisigroup.jtd.ude.tutorials02.model.Contact;
+import com.iisigroup.jtd.ude.tutorials03.model.Contact;
 
 public interface ContactRepository extends PagingAndSortingRepository<Contact, Long> {
 }

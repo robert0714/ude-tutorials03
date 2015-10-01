@@ -37,8 +37,8 @@
         </property> 
 		<property name="packagesToScan" >
 			<array>
-				<value>com.iisigroup.jtd.ude.tutorials02.model</value>
-				<value>com.iisigroup.jtd.ude.tutorials02.dao</value>
+				<value>com.iisigroup.jtd.ude.tutorials03.model</value>
+				<value>com.iisigroup.jtd.ude.tutorials03.dao</value>
 			</array>
 		</property>  
         <property name="jpaProperties">
@@ -56,7 +56,7 @@
 
     <context:annotation-config/>
 
-    <jpa:repositories base-package="com.iisigroup.jtd.ude.tutorials02.dao"
+    <jpa:repositories base-package="com.iisigroup.jtd.ude.tutorials03.dao"
                       entity-manager-factory-ref="emf"
                       transaction-manager-ref="transactionManager"/>
                       

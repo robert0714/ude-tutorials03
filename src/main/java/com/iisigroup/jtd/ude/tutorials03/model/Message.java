@@ -1,4 +1,4 @@
-package com.iisigroup.jtd.ude.tutorials02.model;
+package com.iisigroup.jtd.ude.tutorials03.model;
 
 public class Message {
     private String type;

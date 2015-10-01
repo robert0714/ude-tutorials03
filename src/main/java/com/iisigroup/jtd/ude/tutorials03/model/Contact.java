@@ -1,4 +1,4 @@
-package com.iisigroup.jtd.ude.tutorials02.model;
+package com.iisigroup.jtd.ude.tutorials03.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 

@@ -1,4 +1,4 @@
-package com.iisigroup.jtd.ude.tutorials02.controllers;
+package com.iisigroup.jtd.ude.tutorials03.controllers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.iisigroup.jtd.ude.tutorials02.model.Message;
+import com.iisigroup.jtd.ude.tutorials03.model.Message;
 
 import java.util.Locale;
 

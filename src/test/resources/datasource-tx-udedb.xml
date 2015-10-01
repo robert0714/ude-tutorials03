@@ -49,7 +49,7 @@
 
 <!-- 	<bean id="sessionFactory" -->
 <!-- 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" -->
-<!-- 		p:dataSource-ref="dataSource" p:packagesToScan="com.iisigroup.jtd.ude.tutorials02" -->
+<!-- 		p:dataSource-ref="dataSource" p:packagesToScan="com.iisigroup.jtd.ude.tutorials03" -->
 <!-- 		p:hibernateProperties-ref="hibernateProperties" /> -->
 		
 <!-- 	<util:properties id="hibernateProperties"> -->
@@ -62,7 +62,7 @@
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <!-- SPRING-ORM -->
         <property name="dataSource" ref="dataSource" />
-        <property name="packagesToScan" value="com.iisigroup.jtd.ude.tutorials02.model" />
+        <property name="packagesToScan" value="com.iisigroup.jtd.ude.tutorials03.model" />
         <property name="hibernateProperties">
             <props> 
   				<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>

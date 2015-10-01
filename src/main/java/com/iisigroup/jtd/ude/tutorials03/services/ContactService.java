@@ -1,11 +1,11 @@
-package com.iisigroup.jtd.ude.tutorials02.services;
+package com.iisigroup.jtd.ude.tutorials03.services;
 
 import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.iisigroup.jtd.ude.tutorials02.model.Contact;
+import com.iisigroup.jtd.ude.tutorials03.model.Contact;
 
 public interface ContactService {
     List<Contact> findAll();

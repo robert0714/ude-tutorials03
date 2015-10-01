@@ -17,8 +17,7 @@
     <h3>${menuHeaderText}</h3>
     <sec:authorize access="hasRole('ROLE_USER')">
         <a href="${addContactUrl}"><h3>${menuAddContact}</h3></a>
-    </sec:authorize>
-
+    </sec:authorize> 
     <sec:authorize access="isAnonymous()">
         <div id="login">
             <form name="loginForm" action="${loginUrl}" method="post">
