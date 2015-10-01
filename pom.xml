@@ -8,7 +8,7 @@
 	<name>ude-tutorials03</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
+		<java.version>1.7</java.version>
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<jpa.version>1.0.0.Final</jpa.version>
 		<mockito.version>1.9.5</mockito.version>
@@ -91,14 +91,7 @@
 			<groupId>org.jadira.usertype</groupId>
 			<artifactId>usertype.core</artifactId>
 			<version>${usertype.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.hibernate</groupId>
-					<artifactId>hibernate-entitymanager</artifactId>
-				</exclusion>
-				<!-- 由於 usertype.core exclude hibernate-entitymanager 才導致javaee-api-6 
-					需要實作內容 -->
-			</exclusions>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.dbunit</groupId>
@@ -292,33 +285,43 @@
 		</dependency>
 
 		<!-- UDE 元件 -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.iisigroup</groupId> -->
+<!-- 			<artifactId>iisi-ude-core</artifactId> -->
+<!-- 			<version>${ude.release.version}</version> -->
+<!-- 			<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<artifactId>spring-context</artifactId> -->
+<!-- 					<groupId>org.springframework</groupId> -->
+<!-- 				</exclusion> -->
+<!-- 				<exclusion> -->
+<!-- 					<artifactId>spring-core</artifactId> -->
+<!-- 					<groupId>org.springframework</groupId> -->
+<!-- 				</exclusion> -->
+<!-- 				<exclusion> -->
+<!-- 					<artifactId>slf4j-api</artifactId> -->
+<!-- 					<groupId>org.slf4j</groupId> -->
+<!-- 				</exclusion> -->
+<!-- 			</exclusions> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.iisigroup</groupId> -->
+<!-- 			<artifactId>iisi-ude-db-core</artifactId> -->
+<!-- 			<version>${ude.release.version}</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.iisigroup</groupId> -->
+<!-- 			<artifactId>iisi-ude-db-core-hibernate</artifactId> -->
+<!-- 			<version>${ude.release.version}</version> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>com.iisigroup</groupId>
-			<artifactId>iisi-ude-core</artifactId>
+			<artifactId>iisi-ude-util7</artifactId>
 			<version>${ude.release.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>spring-context</artifactId>
-					<groupId>org.springframework</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>spring-core</artifactId>
-					<groupId>org.springframework</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>slf4j-api</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.iisigroup</groupId>
-			<artifactId>iisi-ude-db-core</artifactId>
-			<version>${ude.release.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.iisigroup</groupId>
-			<artifactId>iisi-ude-db-core-hibernate</artifactId>
+			<artifactId>iisi-udeweb-spring-util</artifactId>
 			<version>${ude.release.version}</version>
 		</dependency>
 		<dependency>
