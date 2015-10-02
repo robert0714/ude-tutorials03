@@ -12,7 +12,8 @@
     <import resource="classpath:META-INF/spring/datasource-tx-jpa.xml"/>
     
 <!--     <import resource="classpath:META-INF/spring/security-context.xml"/> -->
-	<import resource="classpath:META-INF/spring/security-ldap-context.xml"/> 
+<!-- 	<import resource="classpath:META-INF/spring/security-ldap-context.xml"/>  -->
+	<import resource="classpath:META-INF/spring/security-ad-context.xml"/> 
  
     <bean id ="myWebAppInitializer" class="com.iisigroup.jtd.ude.tutorials03.MyWebAppInitializer" ></bean>
      
