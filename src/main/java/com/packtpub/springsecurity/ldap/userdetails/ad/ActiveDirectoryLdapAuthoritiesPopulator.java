@@ -1,9 +1,15 @@
 package com.packtpub.springsecurity.ldap.userdetails.ad;
+ 
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+ 
 
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ldap.core.DirContextOperations;
 import org.springframework.ldap.core.DistinguishedName;
 import org.springframework.ldap.core.LdapRdn;
@@ -21,13 +27,17 @@ import org.springframework.security.ldap.userdetails.LdapAuthoritiesPopulator;
  * @see ActiveDirectoryLdapAuthenticationProvider
  */
 public final class ActiveDirectoryLdapAuthoritiesPopulator implements LdapAuthoritiesPopulator {
+	private final Logger logger = LoggerFactory.getLogger(ActiveDirectoryLdapAuthoritiesPopulator.class);
 
     @Override
-    public Collection<? extends GrantedAuthority> getGrantedAuthorities(DirContextOperations userData, String username) {
-        String[] groups = userData.getStringAttributes("memberOf");
-        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-
+    public Collection<? extends GrantedAuthority> getGrantedAuthorities(final DirContextOperations userData, String username) {
+    	final String[] groups = userData.getStringAttributes("memberOf");
+        final List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+        logger.info("username: {}" ,username);
+        logger.info("userData: {}" ,ToStringBuilder.reflectionToString(userData));
+        
         for (String group : groups) {
+        	authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
             LdapRdn authority = new DistinguishedName(group).removeLast();
             authorities.add(new SimpleGrantedAuthority(authority.getValue()));
         }
