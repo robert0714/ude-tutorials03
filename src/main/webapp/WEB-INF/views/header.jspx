@@ -19,7 +19,11 @@
         <sec:authorize access="isAuthenticated()">${labelWelcome}
             <sec:authentication property="principal.username" />
             <br/>
-            <a href="${logoutUrl}">${labelLogout}</a>
+            <form name="loginForm" action="${logoutUrl}" method="post">
+               <input name="submit" type="submit" value= "${labelLogout}"  />
+              
+              <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            </form>
         </sec:authorize>
     </div>
 </div>

@@ -32,8 +32,10 @@
                         <td><input type="password" name="j_password"/></td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center"><input name="submit" type="submit"
-                                                              value="Login"/></td>
+                        <td colspan="2" align="center">
+                        <input name="submit" type="submit" value="Login"/>
+                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        </td>
                     </tr>
                 </table>
             </form>
