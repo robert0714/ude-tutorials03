@@ -20,12 +20,22 @@
 		<s:anonymous />
 		<s:logout logout-success-url="/contacts" />
 	</s:http>
+	
+	
+	<!-- traditional spring configuration --> 
+
+	<bean id="org.springframework.security.authenticationManager"
+		class="org.springframework.security.authentication.ProviderManager">
+		<constructor-arg>
+			<list>
+
+				<ref bean="daoAuthenticationProvider" /> 
+				<ref bean="daoAuthenticationProvider2" />
+				<ref bean="ldapAuthenticationProvider" />
+			</list>
+		</constructor-arg>
+	</bean>
 	 
-
-
-	<s:authentication-manager>
-        <s:authentication-provider ref="ldapAuthenticationProvider"/>
-   </s:authentication-manager>
 
 
     <bean id="ldapServer"
@@ -56,5 +66,27 @@
 
     <bean id="ldapAuthoritiesPopulator"
             class="com.packtpub.springsecurity.ldap.userdetails.ad.ActiveDirectoryLdapAuthoritiesPopulator"/>
+            
+    <bean id="daoAuthenticationProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService" />
+	</bean>
+	<bean id="daoAuthenticationProvider2"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="inMemoryDaoImpl" />
+	</bean>	
+    <bean id="userDetailsService"
+			class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<bean id = "inMemoryDaoImpl"  
+	class = "org.springframework.security.provisioning.InMemoryUserDetailsManager" >  
+        <constructor-arg  >             
+            <value>
+					user=password,ROLE_USER
+			</value>
+        </constructor-arg >  
+    </bean > 
+    
 
 </beans>
