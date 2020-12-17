@@ -33,7 +33,7 @@
 		<spring.security.version>4.0.2.RELEASE</spring.security.version>
 		<!-- spring security migration from 3.2.8.RELEASE to 4.0.2.RELEASE , some 
 			problems happened -->
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<javax.el.version>2.2</javax.el.version>
 		<ude.release.version>1.0.0</ude.release.version>
 	</properties>
