@@ -30,7 +30,7 @@
 		<!-- After spring 4.0.9 , MappingJacksonHttpMessageConverter migrate to 
 			MappingJackson2HttpMessageConverter for Jackson 2.x. -->
 		<commons.io.version>2.4</commons.io.version>
-		<spring.security.version>4.0.2.RELEASE</spring.security.version>
+		<spring.security.version>5.5.7</spring.security.version>
 		<!-- spring security migration from 3.2.8.RELEASE to 4.0.2.RELEASE , some 
 			problems happened -->
 		<junit.version>4.12</junit.version>
