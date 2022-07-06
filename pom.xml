@@ -17,7 +17,7 @@
 		<joda.time.jsptags.version>1.1.1</joda.time.jsptags.version>
 		<dbunit.version>2.5.1</dbunit.version>
 		<usertype.version>4.0.0.GA</usertype.version>
-		<spring.data.jpa.version>1.8.1.RELEASE</spring.data.jpa.version>
+		<spring.data.jpa.version>1.11.23.RELEASE</spring.data.jpa.version>
 		<google.guava.version>14.0.1</google.guava.version>
 		<h2.version>1.4.187</h2.version>
 		<slf4j.log4j.version>1.7.6</slf4j.log4j.version>
